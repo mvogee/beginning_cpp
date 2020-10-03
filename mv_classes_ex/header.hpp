@@ -7,6 +7,7 @@ class rectangle {
 
   public:
   rectangle(double s1, double s2);
-  double rect_area(double const side_one, double const side_two);
+  double get_rect_area();
+  ~rectangle();
 
 };
