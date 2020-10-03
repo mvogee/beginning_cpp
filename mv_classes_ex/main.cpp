@@ -14,6 +14,8 @@ int main(int argc, char const *argv[]) {
   }
   // END argc argv printing;
 if (argc == 3){
+  // set s1 and s2 to the user input
+  // catching for errors if the input isnt a valid double
   try {
     s1 = std::stod (argv[1]);
     s2 = std::stod (argv[2]);
