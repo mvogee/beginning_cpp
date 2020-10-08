@@ -2,6 +2,7 @@
 
 // game borad class (game_board.cpp)
 
+
 class game_board {
 
   // game board is initialized.
@@ -27,5 +28,9 @@ class player {
   char get_token();
   int get_turns();
   void add_turn();
+  std::string get_name();
   ~player();
 };
+
+
+void win_conditions(player *plyr, game_board *board, int last_play);

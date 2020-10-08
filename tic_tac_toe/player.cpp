@@ -20,6 +20,10 @@ void player::add_turn() {
   turns++;
 }
 
+std::string player::get_name() {
+  return (name);
+}
+
 player::~player() {
 
 }
