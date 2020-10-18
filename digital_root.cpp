@@ -1,3 +1,6 @@
+#include <iostream>
+
+/* RECURSIVE SOLUTION
 int digital_root(int n)
 {
   // recursively solves problem
@@ -9,4 +12,10 @@ int digital_root(int n)
       n /= 10;
     }
     return (digital_root(sum));
+}
+*/
+
+// non recursive solution
+int digital_root(int n) {
+  return --n % 9 + 1;
 }
