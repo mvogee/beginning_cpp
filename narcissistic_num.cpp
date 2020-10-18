@@ -1,25 +1,14 @@
 #include <cmath>
-
-int findbase(int value) {
-  int base = 0;
-  while (value > 0) {
-    base++;
-    value = value / 10;
-  }
-  return (base);
-}
+#include <iostream>
 
 bool narcissistic(int value){
-  int base;
+  int base = log10(value);
   int valcopy = value;
-  int testnum = 0;
+  int sum = 0;
 
-  base = findbase(value);
-  while (value > 0) {
-    testnum += pow(value % 10, base);
-    value = value / 10;
+  while (valcopy > 0) {
+    sum += pow(valcopy % 10, base);
+    valcopy /= 10;
   }
-  if (testnum == valcopy)
-    return (true);
-  return (false);
+  return sum == value;
 }
