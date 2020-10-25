@@ -61,6 +61,13 @@ bool check_live(int i, int j) {
   return gamemap[i][j] == '#' ? true : false;
 }
 
+void check_living(int i, int j) {
+  //check the 8 surrounding locations for 2 living spaces
+}
+void check_dead(int i, int j) {
+  //check the 8 surrounding locations for 2 living spaces
+}
+
 void game_of_life() {
   bool alive;
   // life checking; go through each spot on the map
@@ -69,6 +76,7 @@ void game_of_life() {
     for (int j = 0; j < 10; j++) {
       alive = check_live(i, j);
       std::cout << alive;
+      alive ? check_living(i, j) : check_dead(i, j);
       // if it is dead - check if it should live
       // if it is alive - check if it should die
     }
