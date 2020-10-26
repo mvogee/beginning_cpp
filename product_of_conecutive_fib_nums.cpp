@@ -15,10 +15,5 @@ std::vector<ull> ProdFib::productFib(ull prod) {
     fib1 = fib2;
     fib2 = fib_sum;
   }
-  std::vector<ull> product;
-  product.push_back(fib1);
-  product.push_back(fib2);
-  fib1 * fib2 == prod ? product.push_back(1) : product.push_back(0);
-
-  return (product);
+  return ({fib1, fib2, fib1*fib2 == prod});
 }
